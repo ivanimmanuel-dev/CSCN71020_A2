@@ -76,7 +76,7 @@ int getIntInput(char message[])
 
 void setLength(int input, int *length) 
 {
-	if (input >= 0 && input < 100) 
+	if (input >= 1 && input <= 99) 
 	{
 		*length = input;
 	}
@@ -84,7 +84,7 @@ void setLength(int input, int *length)
 
 void setWidth(int input, int *width) 
 {
-	if (input > 0 && input <= 100) 
+	if (input >= 1 && input <= 99) 
 	{
 		*width = input;
 	}
