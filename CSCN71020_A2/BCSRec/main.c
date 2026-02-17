@@ -3,11 +3,13 @@
 
 #include "main.h"
 
-void main() {
+void main() 
+{
 	int length = 1;
 	int width = 1;
 	bool continueProgram = true;
-	while (continueProgram) {
+	while (continueProgram) 
+	{
 		printWelcomeMenu();
 
 		printOptions();
@@ -58,10 +60,12 @@ void main() {
 	}
 }
 
-int getIntInput(char message[]) {
+int getIntInput(char message[]) 
+{
 	int input;
 	int scannedValues;
-	do {
+	do 
+	{
 		printf("\n%s\n",message);
 		scannedValues = scanf_s("%i", &input);
 		int buf;
@@ -70,36 +74,44 @@ int getIntInput(char message[]) {
 	return input;
 }
 
-void setLength(int input, int *length) {
-	if (input >= 0 && input < 100) {
+void setLength(int input, int *length) 
+{
+	if (input >= 0 && input < 100) 
+	{
 		*length = input;
 	}
 }
 
-void setWidth(int input, int *width) {
-	if (input > 0 && input <= 100) {
+void setWidth(int input, int *width) 
+{
+	if (input > 0 && input <= 100) 
+	{
 		*width = input;
 	}
 }
 
-int getPerimeter(int *length, int *width) {
+int getPerimeter(int *length, int *width) 
+{
 	int perimeter = *length + *length + *width;
 	return perimeter;
 }
 
-int getArea(int *length, int *width) {
+int getArea(int *length, int *width) 
+{
 	int area = *length * *width;
 	return area;
 }
 
-void printWelcomeMenu() {
+void printWelcomeMenu() 
+{
 	printf(" **********************\n");
 	printf("**     Welcome to     **\n");
 	printf("**    Assignment 02   **\n");
 	printf(" **********************\n");
 }
 
-void printOptions() {
+void printOptions() 
+{
 	printf("1. Get Rectange Length & Width\n");
 	printf("2. Change Rectangle Length\n");
 	printf("3. Change Rectangle Width\n");
